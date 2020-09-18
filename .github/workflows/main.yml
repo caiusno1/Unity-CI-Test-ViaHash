@@ -29,7 +29,7 @@ jobs:
         uses: webbertakken/unity-builder@master
         with:
           unityVersion: 2019.3.0f6
-          customImage: gableroux/unity3d:2019.3.0f1-webgl@sha256:6cfc56c1f7404420fbf74a2086b8f86b89affc9bcc9566edf599737583c2e115
+          customImage: gableroux/unity3d@sha256:6cfc56c1f7404420fbf74a2086b8f86b89affc9bcc9566edf599737583c2e115
           targetPlatform: WebGL
 
       # Output
