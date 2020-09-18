@@ -1,4 +1,4 @@
-name: Actions 😎
+name: UnityBuild 😎
 
 on:
   pull_request: {}
@@ -28,13 +28,14 @@ jobs:
       - name: Run tests
         uses: webbertakken/unity-test-runner@v1.3
         with:
-          unityVersion: 2019.2.11f1
+          unityVersion: 2019.3.0f6
 
       # Build
       - name: Build project
-        uses: webbertakken/unity-builder@v0.10
+        uses: webbertakken/unity-builder@master
         with:
-          unityVersion: 2019.2.11f1
+          unityVersion: 2019.3.0f6
+          customImage: gableroux/unity3d:2019.3.0f1@6cfc56c1f7404420fbf74a2086b8f86b89affc9bcc9566edf599737583c2e115
           targetPlatform: WebGL
 
       # Output
