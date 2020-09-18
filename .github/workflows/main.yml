@@ -29,8 +29,8 @@ jobs:
         uses: webbertakken/unity-builder@master
         with:
           unityVersion: 2019.3.0f6
-          customImage: gableroux/unity3d@sha256:f976e24f4bd44dfd0d25ad270490d261fa4cbf0164b71a20f370d7ce2859cfd9
-          targetPlatform: WebGL
+          customImage: gableroux/unity3d@sha256:efe8e1ebdc9490674c96685bab17f3c46a65f1f06ed38826c306f3218cae2d51
+          targetPlatform: Android
 
       # Output
       - uses: actions/upload-artifact@v1
