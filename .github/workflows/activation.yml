@@ -1,0 +1,2 @@
+- name: Unity - Request Activation File
+  uses: webbertakken/unity-request-activation-file@v1.1
