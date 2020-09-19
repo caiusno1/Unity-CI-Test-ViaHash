@@ -28,8 +28,8 @@ jobs:
       - name: Build project
         uses: webbertakken/unity-builder@master
         with:
-          unityVersion: 2019.3.0f6
-          customImage: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
+          unityVersion: 2019.3.11f1
+          customImage: gableroux/unity3d@sha256:9ce3d610bd4be1fdae0b91369cde3a29074fb92469a52e48dc611e7e47c67d5b
           targetPlatform: Android
 
       # Output
