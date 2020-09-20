@@ -29,7 +29,7 @@ jobs:
         uses: caiusno1/unity-builder@master
         with:
           unityVersion: 2019.3.11f1
-          customImage: gableroux/unity3d@sha256:9ce3d610bd4be1fdae0b91369cde3a29074fb92469a52e48dc611e7e47c67d5b
+          customImage: gableroux/unity3d@sha256:b1f70dacad9718062c06cfea198ff0d8f82b12272ba22b9620ebf272f6a9ee02
           targetPlatform: Android
 
       # Output
