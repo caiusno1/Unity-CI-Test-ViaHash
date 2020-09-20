@@ -26,7 +26,7 @@ jobs:
 
       # Build
       - name: Build project
-        uses: webbertakken/unity-builder@master
+        uses: caiusno1/unity-builder@master
         with:
           unityVersion: 2019.3.11f1
           customImage: gableroux/unity3d@sha256:9ce3d610bd4be1fdae0b91369cde3a29074fb92469a52e48dc611e7e47c67d5b
