@@ -29,7 +29,7 @@ jobs:
         uses: webbertakken/unity-builder@master
         with:
           unityVersion: 2019.3.11f1
-          customImage: gableroux/unity3d@sha256:4e2710012f08371d1a20101c6bd3cd57af9693828e67b8fb2345ce581b04c6cc
+          customImage: gableroux/unity3d@sha256:9ce3d610bd4be1fdae0b91369cde3a29074fb92469a52e48dc611e7e47c67d5b
           targetPlatform: Android
 
       # Output
