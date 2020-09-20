@@ -26,7 +26,7 @@ jobs:
 
       # Build
       - name: Build project
-        uses: caiusno1/unity-builder@master
+        uses: caiusno1/unity-builder@e4ac70c0fcbbf1ef072642dd094336d1700f8e63
         with:
           unityVersion: 2019.3.11f1
           customImage: gableroux/unity3d@sha256:b1f70dacad9718062c06cfea198ff0d8f82b12272ba22b9620ebf272f6a9ee02
