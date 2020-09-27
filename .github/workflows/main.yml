@@ -28,8 +28,8 @@ jobs:
       - name: Build project
         uses: caiusno1/unity-builder@master
         with:
-          unityVersion: 2019.3.11f1
-          customImage: gableroux/unity3d@sha256:4e2710012f08371d1a20101c6bd3cd57af9693828e67b8fb2345ce581b04c6cc
+          unityVersion: 2019.3.0f6
+          customImage: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
           targetPlatform: Android
 
       # Output
