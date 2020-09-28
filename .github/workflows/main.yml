@@ -36,4 +36,6 @@ jobs:
       - uses: actions/upload-artifact@v1
         with:
           name: Build
-          path: build
+          path: 
+            build
+            profile_build_run
