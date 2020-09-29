@@ -12,8 +12,6 @@ jobs:
     name: Build my project ✨
     runs-on: self-hosted
     steps:
-      - name: Skip Duplicate Actions
-        uses: fkirc/skip-duplicate-actions@v1.4.0
 
       # Checkout
       - name: Checkout repository
