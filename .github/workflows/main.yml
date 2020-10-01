@@ -40,3 +40,4 @@ jobs:
           path: 
             build
             profile_build_run
+            /root/.gradle/daemon/5.1.1/*.out.log
