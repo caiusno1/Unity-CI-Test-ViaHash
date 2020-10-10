@@ -1,0 +1,45 @@
+name: Build project
+
+on:
+  pull_request: {}
+  push: { branches: [main] }
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE2 }}
+
+jobs:
+  buildForSomePlatforms:
+    name: Build for ${{ matrix.targetPlatform }} on version ${{ matrix.unityVersion }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        projectPath:
+          - Project
+        unityVersion:
+          - 2019.4.10f1
+        targetPlatform:
+          # - StandaloneWindows # Build a Windows standalone.
+          # - iOS # Build an iOS player.
+          - Android # Build an Android .apk standalone app.
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - uses: actions/cache@v2.1.2
+        with:
+          path: ${{ matrix.projectPath }}/Library
+          key: Library-${{ matrix.projectPath }}-${{ matrix.targetPlatform }}
+          restore-keys: |
+            Library-${{ matrix.projectPath }}-
+            Library-
+      - uses: webbertakken/unity-builder@v1.2
+        with:
+          projectPath: ${{ matrix.projectPath }}
+          unityVersion: ${{ matrix.unityVersion }}
+          targetPlatform: ${{ matrix.targetPlatform }}
+      - uses: actions/upload-artifact@v1
+        with:
+          customParameters: '-nographics' # <--- This is the important bit
+          name: Build
+          path: build
