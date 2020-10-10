@@ -1,15 +1,15 @@
-name: UnityBuild v2
+name: UnityBuildB
 
 on:
   pull_request: {}
   push: { branches: [master] }
 
 env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE2 }}
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSEB }}
 
 jobs:
   build:
-    name: Build my project ✨
+    name: Build my project
     runs-on: ubuntu-latest
     steps:
 
