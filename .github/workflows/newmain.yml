@@ -27,10 +27,10 @@ jobs:
         with:
           lfs: true
        # Cache
-      - uses: actions/cache@v1.1.0
-        with:
-          path: Library
-          key: Library
+      #- uses: actions/cache@v1.1.0
+      #  with:
+      #    path: Library
+      #    key: Library
       - uses: webbertakken/unity-builder@v1.2
         with:
           projectPath: ${{ matrix.projectPath }}
