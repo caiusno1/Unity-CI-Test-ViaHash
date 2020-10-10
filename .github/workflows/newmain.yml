@@ -1,4 +1,4 @@
-name: Build project v2
+name: UnityBuild v2
 
 on:
   pull_request: {}
@@ -8,36 +8,36 @@ env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE2 }}
 
 jobs:
-  buildForSomePlatforms:
-    name: Build for ${{ matrix.targetPlatform }} on version ${{ matrix.unityVersion }}
+  build:
+    name: Build my project ✨
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - Project
-        unityVersion:
-          - 2019.4.10f1
-        targetPlatform:
-          # - StandaloneWindows # Build a Windows standalone.
-          # - iOS # Build an iOS player.
-          - Android # Build an Android .apk standalone app.
     steps:
-      - uses: actions/checkout@v2
+
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
           lfs: true
-       # Cache
-      #- uses: actions/cache@v1.1.0
-      #  with:
-      #    path: Library
-      #    key: Library
-      - uses: webbertakken/unity-builder@v1.2
+
+      # Cache
+      - uses: actions/cache@v1.1.0
         with:
-          projectPath: ${{ matrix.projectPath }}
-          unityVersion: ${{ matrix.unityVersion }}
-          targetPlatform: ${{ matrix.targetPlatform }}
+          path: Library
+          key: Library
+
+      # Build
+      - name: Build project
+        uses: webbertakken/unity-builder@v1.2
+        with:
+          unityVersion: 2019.3.0f6
+          customImage: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
+          targetPlatform: Android
+
+      # Output
       - uses: actions/upload-artifact@v1
         with:
-          customParameters: '-nographics' # <--- This is the important bit
           name: Build
-          path: build
+          path: 
+            build
+            profile_build_run
+            /root/.gradle/daemon/5.1.1/*.out.log
