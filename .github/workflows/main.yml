@@ -39,7 +39,7 @@ jobs:
         with:
           name: Build
           path: 
-            /root/.gradle/daemon/5.1.1/*.out.log
+            /root/.gradle/daemon/5.1.1
       # Output
       - uses: actions/upload-artifact@v1
         with:
