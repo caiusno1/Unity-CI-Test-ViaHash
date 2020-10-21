@@ -33,11 +33,16 @@ jobs:
           customImage: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
           targetPlatform: Android
 
+      # Output (pre)
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: Build
+          path: 
+            /root/.gradle/daemon/5.1.1/*.out.log
       # Output
       - uses: actions/upload-artifact@v1
         with:
           name: Build
           path: 
             build
-            profile_build_run
-            /root/.gradle/daemon/5.1.1/*.out.log
