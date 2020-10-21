@@ -1,5 +1,4 @@
-name: UnityBuild 😎
-
+name: UnityBuild
 on:
   pull_request: {}
   push: { branches: [master] }
@@ -9,7 +8,7 @@ env:
 
 jobs:
   build:
-    name: Build my project ✨
+    name: Build my project
     runs-on: ubuntu-latest
     steps:
 
@@ -27,7 +26,7 @@ jobs:
 
       # Build
       - name: Build project
-        uses: caiusno1/unity-builder@try-196fe8f-hardcodeDockerImg
+        uses: caiusno1/unity-builder@master
         with:
           unityVersion: 2019.3.0f6
           customImage: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
