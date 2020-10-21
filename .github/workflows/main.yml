@@ -24,6 +24,9 @@ jobs:
           path: Library
           key: Library
 
+      - name: Unity - Activate
+        uses: webbertakken/unity-activate@v1.3
+
       # Build
       - name: Build project
         uses: caiusno1/unity-builder@master
