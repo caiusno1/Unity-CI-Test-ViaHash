@@ -28,11 +28,6 @@ jobs:
           path: Library
           key: Library
 
-      - name: Unity - Activate
-        uses: webbertakken/unity-activate@v1.3
-        with:
-          unityVersion: 2019.3.0f6
-
       # Build
       - name: Build project
         uses: caiusno1/unity-builder@master
